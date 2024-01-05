@@ -5,26 +5,31 @@
 </head>
 <body>
 
-<div class="header">
-    <h1  id="title">Baqan Script Translator</h1>
-</div>
+    <div class="topBar">
+        <a href="index.html" style="padding-top: 0%;"><h3>✨ Arkhe ✨</h3></a>
+        <a href="conlang.html">Conlang</a>
+        <a href="lang.html" class="active">Conscript Translator</a>
+        <a>Starbucks but good</a>
+        <a style="float:right"> change 🔄</a>
+      </div>
 
-<div id="input">
-    <textarea id="text"></textarea>
-    <div id="button">
-        <button>Get objects</button>
-    </div>
-    
-</div>
+    <main>
+        <div style="margin: 10px; align-content: center;">
+            <div id="input">
+                <textarea id="text"></textarea>
+                <div id="button">
+                    <button>Get objects</button>
+                </div>
+            </div>
+            
+            <div class="output">
+                <p id="arr"></p>
+                <p id="list"> </p>
+                <p id="objArr"></p>
+            </div>
+        </div>
+    </main>
 
-<div class="output">
-    <p id="arr"></p>
-    <p id="list"> </p>
-    <p id="objArr"></p>
-</div>
-
-
-<script src="index.js"></script>  
-
+    <script src="lang.js"></script> 
 </body>
 </html>

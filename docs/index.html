@@ -1,15 +1,70 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arkhe's Website</title>
-    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
-  </head>
-  <body>
-    <h2>Welcome to my Website!!</h2>
-    <hr/>
-    <p>Currently the site is under construction. I will use it to practice web programming and have a space to put out my projects.</p>
-    <a href="lang.html"><p>Conlang script translation </p></a>
-  </body>
+    <title>Arkhe</title>
+    <link href="index.css" rel="stylesheet" type="text/css" media="all">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        let firstloaded = false;
+
+        function checkurl(){
+            firstloaded = true;
+            if(!firstloaded){
+                let params = new URLSearchParams(window.location.href).get("z");
+                if(params == null){
+                    params = "main";
+                }
+                changeiframe(params);
+                firstloaded = true;
+            }
+        }
+
+        function updateurl(pagename){
+            window.history.pagename(pagename, pagename, + "/" +pagename + ".html");
+        }
+
+        function changeiframe(pagename){
+            document.getElementById("mainframe").src = pagename + ".html";
+            updateurl(pagename);
+            console.log(window.location.href)
+            console.log(document.getElementById("mainframe").src)
+        }
+
+    </script>
+</head>
+<body class="main-page">
+    <div class="content topnav" style="background-image: none; padding: 0;">
+        <a onclick="changeiframe('main')"><img style="height: 80px; cursor: pointer;" src="img/arkhe-pokelogo.png"></a>
+    </div>
+
+    <main>
+        <div class="side">
+            <div class="content sidebar">
+                <p>Projects:</p>
+                <hr>
+                <p>Conlangs:</p>
+                <a onclick="changeiframe('conlang')">&emsp; Conlang 1</a> <br>
+                <a>&emsp; Conlang 1 script translator</a>
+                <p><a>Starbucks but good WIP</a></p>
+                <p><a>Art WIP</a></p>
+                <p><a>Writing WIP</a></p>
+            </div>
+            <div class="content">
+                <p>Cool image:</p>
+                <img style="display:flex; width:100%; flex-direction: column;" src="img/smiley.jpg" >
+            </div>
+        </div>
+        <div class="content middle">
+            <iframe onload="checkurl()" src="main.html" id="mainframe" frameBorder=0></iframe>
+        </div>
+        <div class="side">
+            <div class="content">
+                music player WIP
+            </div>
+        </div>
+    </main>
+</body>
 </html>

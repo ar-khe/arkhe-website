@@ -1,6 +1,12 @@
-.header{
-    padding:20px;
-    background-color: rgba(0, 0, 0, 0.25);
+
+:root{
+    --content-gradient: linear-gradient(rgba(56, 106, 43, 0.75), rgba(13, 31, 13, 0.75));
+    --letter-color: #f2f2f2;
+    --background-image: url("img/frutiger.webp");
+    --accent-color: #a2f3ba;
+    --table-border-color: #add2bd;
+    --table-header-color: #18452694;
+    --list-prefix: "🐠 ";
 }
 
 .footer{
@@ -9,7 +15,7 @@
 }
 
 .main-page{
-    background-image: url("img/frutiger.webp");
+    background-image: var(--background-image);
     background-repeat: no-repeat;
     background-size:cover;
     background-attachment: fixed;
@@ -24,18 +30,18 @@
 .topnav a {
     float: left;
     display: block;
-    color: #f2f2f2;
+    color: var(--letter-color);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 
 .topnav a:hover {
-    color: #a2f3ba;
+    color: var(--accent-color);
 }
 
 .sidebar a:hover{
-    color:#a2f3ba;
+    color: var(--accent-color);
 }
 
 main{
@@ -57,20 +63,20 @@ main{
 
 .content{
     border-radius: 10px;
-    background-image: linear-gradient(rgba(56, 106, 43, 0.75), rgba(13, 31, 13, 0.75));
+    background-image: var(--content-gradient);
     padding: 20px;
-    color: #f2f2f2;
+    color: var(--letter-color);
     margin: 10px;
 }
 
 .sidebar a:visited{
-    color: #f2f2f2;
+    color: var(--letter-color);
     text-decoration-line: none;
     text-decoration: none;
 }
 
 .sidebar a:hover{
-    color: #7ff0aa;
+    color: var(--accent-color);
     cursor: pointer;
 }
 
@@ -79,7 +85,7 @@ main{
 }
 
 .phonemic-chart th, .phonemic-chart td{
-    border: 2px solid #add2bd;
+    border: 2px solid var(--table-border-color);
     border-collapse: collapse;
     padding: 10px;
 }
@@ -92,7 +98,7 @@ main{
 }
 
 .phonemic-chart th{
-    background-color: #18452694;
+    background-color: var(--table-header-color);
 }
 
 .phonemic-chart td{
@@ -100,7 +106,7 @@ main{
 }
 
 ul{
-    list-style: "🐠 ";
+    list-style: var(--list-prefix);
 }
 
 #mainframe{
@@ -112,7 +118,19 @@ ul{
 }
 
 .framed-body{
-    background-color: rgba(240, 248, 255, 0); 
+    background-color: rgba(0, 0, 0, 0); 
     background-image: none; 
-    color: #f2f2f2;
+    color: var(--letter-color);
+}
+
+.theme-button{
+    border-radius: 10px;
+    background-image: var(--content-gradient);
+    background-color: rgba(0, 0, 0, 0);
+    padding: 20px;
+    color: var(--letter-color);
+    margin: 10px;
+    border-style: none;
+    cursor: pointer;
+    width: 100%;
 }

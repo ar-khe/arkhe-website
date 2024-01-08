@@ -4,37 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arkhe</title>
-    <link href="index.css" rel="stylesheet" type="text/css" media="all">
+    <link id="css" href="frutiger.css" rel="stylesheet" type="text/css" media="all">
+    <script src="theme-changer.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script>
-        let firstloaded = false;
-
-        function checkurl(){
-            firstloaded = true;
-            if(!firstloaded){
-                let params = new URLSearchParams(window.location.href).get("z");
-                if(params == null){
-                    params = "main";
-                }
-                changeiframe(params);
-                firstloaded = true;
-            }
-        }
-
-        function updateurl(pagename){
-            window.history.pagename(pagename, pagename, + "/" +pagename + ".html");
-        }
-
-        function changeiframe(pagename){
-            document.getElementById("mainframe").src = pagename + ".html";
-            updateurl(pagename);
-            console.log(window.location.href)
-            console.log(document.getElementById("mainframe").src)
-        }
-
-    </script>
+    <script src="iframe-changer.js"></script>
 </head>
+
 <body class="main-page">
     <div class="content topnav" style="background-image: none; padding: 0;">
         <a onclick="changeiframe('main')"><img style="height: 80px; cursor: pointer;" src="img/arkhe-pokelogo.png"></a>
@@ -47,7 +23,7 @@
                 <hr>
                 <p>Conlangs:</p>
                 <a onclick="changeiframe('conlang')">&emsp; Conlang 1</a> <br>
-                <a>&emsp; Conlang 1 script translator</a>
+                <a onclick="changeiframe('conlang-translator')">&emsp; Conlang 1 script translator</a>
                 <p><a>Starbucks but good WIP</a></p>
                 <p><a>Art WIP</a></p>
                 <p><a>Writing WIP</a></p>
@@ -58,11 +34,16 @@
             </div>
         </div>
         <div class="content middle">
-            <iframe onload="checkurl()" src="main.html" id="mainframe" frameBorder=0></iframe>
+            <iframe src="main.html" id="mainframe" frameBorder=0></iframe>
         </div>
         <div class="side">
-            <div class="content">
-                music player WIP
+            <div style="width: 100%; display: flex; justify-content: center;">
+                <button class="theme-button" onclick="changetheme();"><h2>✨ <b>CHANGE THEME</b> ✨</h2></button>
+            </div>
+            <div class="content" style="justify-content: center; display: flex; flex-direction: column;">
+                <div>
+                    <p style="text-align: center;">music player WIP</p>
+                </div>
             </div>
         </div>
     </main>

@@ -3,7 +3,7 @@
 :root{
     --content-gradient: linear-gradient(rgba(56, 106, 43, 0.75), rgba(13, 31, 13, 0.75));
     --letter-color: #a2ece6;
-    --background-image: url("img/frutiger.webp");
+    --background-image: url("../img/backgrounds/frutiger.webp");
     --accent-color: #a2f3ba;
     --table-border-color: #add2bd;
     --table-header-color: #18452694;

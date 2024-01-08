@@ -3,7 +3,7 @@
 :root{
     --content-gradient: linear-gradient(rgba(43, 72, 106, 0.75), rgba(16, 13, 31, 0.75));
     --letter-color: #95cce9;
-    --background-image: url("img/y2k-wallpaper.jpg");
+    --background-image: url("../img/backgrounds/y2k-wallpaper.jpg");
     --accent-color: #a2c4f3;
     --table-border-color: #adc2d2;
     --table-header-color: #181a4594;

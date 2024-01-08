@@ -53,6 +53,6 @@ function updateHistory() {
 
 //i wrote this one :3
 function changeiframe(pagename){
-    document.getElementById("mainframe").src = pagename + ".html";
+    document.getElementById("mainframe").src = "docs/" + pagename + ".html";
     updateHistory();
 }

@@ -3,7 +3,7 @@
 :root{
     --content-gradient: linear-gradient(rgba(106, 43, 93, 0.75), rgba(31, 13, 25, 0.75));
     --letter-color: #edc3ed;
-    --background-image: url("img/godzilla-wallpaper.jpg");
+    --background-image: url("../img/backgrounds/godzilla-wallpaper.jpg");
     --accent-color: #b2a2f3;
     --table-border-color: #d0add2;
     --table-header-color: #45183494;

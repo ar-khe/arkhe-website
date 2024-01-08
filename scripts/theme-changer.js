@@ -14,10 +14,12 @@ function changetheme(){
         currentThemeIndex = -1;
     }
 
+    let newTheme = "styles/" + themes[currentThemeIndex + 1];
+
     //changes css source to next element in themes[] in main website
-    document.getElementById("css").href = themes[currentThemeIndex + 1];
+    document.getElementById("css").href = newTheme;
     //changes css source to next element in themes[] in iframed doc
-    document.getElementById("mainframe").contentWindow.document.getElementById("css").href = themes[currentThemeIndex + 1];
+    document.getElementById("mainframe").contentWindow.document.getElementById("css").href = "../"+ newTheme;
 
 
 }

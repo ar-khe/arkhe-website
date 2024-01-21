@@ -28,7 +28,10 @@ function setMainFrame() {
     mainFrame = document.getElementById("mainframe");
     if (page != null) {
         mainFrame.src = page;
+    } else {
+        mainFrame.src = "docs/main.html";
     }
+    updateHistory();
 }
 
 //Updates the browser history with the current page, causing the URL bar to update.
